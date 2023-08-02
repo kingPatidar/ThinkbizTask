@@ -8,7 +8,7 @@
 import UIKit
 
 class DetailController: UIViewController {
-
+    
     @IBOutlet weak var objCollView: UICollectionView!
     @IBOutlet weak var lblTitle: UILabel!
     
@@ -48,8 +48,13 @@ extension DetailController: UICollectionViewDataSource, UICollectionViewDelegate
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = (objCollView.bounds.width - 30) / 3
-        return CGSize(width: width, height: 150)
+        if isIpad {
+            let width = (objCollView.bounds.width - 60) / 3
+            return CGSize(width: width, height: 250)
+        } else {
+            let width = (objCollView.bounds.width - 30) / 3
+            return CGSize(width: width, height: 150)
+        }
     }
     
     
