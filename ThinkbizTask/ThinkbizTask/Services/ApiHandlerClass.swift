@@ -10,18 +10,8 @@ import UIKit
 //MARK: API Constant
 
 struct APIConstant {
-    static let parseErrorDomain = "ParseError"
-    static let parseErrorMessage = "Unable to parse data"
-    static let parseErrorCode = Int(UInt8.max)
     static let content_type = "Content-Type"
-    static let device_type = "Device-Type"
-    static let Authorization = "Authorization"
-    static let content_value_urlencoded = "application/x-www-form-urlencoded"
     static let content_value_Json = "application/json"
-    static let content_value_Form_Data = "multipart/form-data"
-    static let platform = "iOS"
-    static let timezoneUTC = "UTC"
-    static let languageCode = "lang-code"
 }
 
 private var sharedApi:ApiHandlerClass? = nil
